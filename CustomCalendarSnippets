@@ -1,0 +1,77 @@
+<!-- from https://developer.salesforce.com/forums/?id=906F0000000fzIcIAI -->
+
+01
+Visualforce page:
+02
+ 
+03
+<apex:page docType="html-5.0" controller="Sample">
+04
+<apex:form >
+05
+    <apex:pageBlock >
+06
+        <apex:pageBlockSection>
+07
+            <apex:pageBlockSectionItem>
+08
+                Date: <apex:input type="date" value="{!dat}"/>
+09
+            </apex:pageBlockSectionItem>
+10
+        </apex:pageBlockSection>
+11
+    </apex:pageBlock>
+12
+</apex:form>
+13
+</apex:page>
+14
+ 
+15
+Apex Controller:
+16
+ 
+17
+public class Sample {
+18
+    public Date dat {get;set;}
+19
+    public Sample() {
+20
+ 
+21
+    }
+22
+}
+
+<!-- another example -->
+
+<apex:page docType="html-5.0" controller="Sample">
+<apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection>
+            <apex:pageBlockSectionItem>
+                Date: <apex:input type="date" value="{!dat}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>
+
+<!-- another example -->
+
+<apex:page standardcontroller=’Account’>
+    <apex:form>
+        <apex:inputfield value=”{!Account.DateTypeField}”
+    </apex:form>
+</apex:page>
+
+<!-- another example using class -->
+
+public class Sample {
+    public Date dat {get;set;}
+    public Sample() {
+
+    }
+}
